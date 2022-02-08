@@ -5,7 +5,19 @@
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>
+  <FooterComponent />
 </template>
+
+<script>
+import FooterComponent from './components/FooterComponent'
+
+export default {
+  components: {FooterComponent},
+  render () {
+    return <FooterComponent />
+  }
+}
+</script>
 
 <style>
 
