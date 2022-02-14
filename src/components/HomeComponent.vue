@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-fluid bg-dark">
       <div class="row justify-content-center align-items-center">
         <div class="card bg-transparent border-0 mt-3 satelite">
           <img src="../assets/satellite.png" class="card-img-top" alt="satelite">
