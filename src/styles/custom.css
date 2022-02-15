@@ -10822,7 +10822,7 @@ body {
 }
 
 .bg-image {
-  background-image: url("../assets/spacePrueba.jpg");
+  background-color: #212529;
   height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -10850,6 +10850,10 @@ body {
 .hr {
   background: white;
   height: 5px;
+}
+
+.carousel {
+  max-width: 800px;
 }
 
 /*# sourceMappingURL=custom.css.map */
