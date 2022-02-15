@@ -10856,4 +10856,14 @@ body {
   max-width: 800px;
 }
 
+.producto {
+  transition: 0.3s;
+  border: none;
+}
+
+.producto:hover {
+  background-color: #212529;
+  color: white;
+}
+
 /*# sourceMappingURL=custom.css.map */

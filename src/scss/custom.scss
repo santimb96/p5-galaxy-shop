@@ -95,5 +95,13 @@ body {
 .carousel{
   max-width: 800px;
 }
+.producto{
+ transition: 0.3s;
+ border: none;
+}
+.producto:hover{
+  background-color: $primary;
+  color:$text;
+}
 
 
