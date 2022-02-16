@@ -114,7 +114,8 @@
                     <input
                       type="number"
                       style="width: 3rem"
-                      v-model = "numero"
+                      v-model="numero"
+                      v-bind="setValues"
                     />
                   </div>
                 </div>
@@ -123,8 +124,9 @@
 
             <div class="text-end pe-3">
               <p>{{ total }}</p>
+              
             </div>
-
+            <p>{{ numero }}</p>
             <!-- <p class="text-center">19,95€</p> -->
             <div class="text-center">
               <a href="#" class="btn btn-secondary producto">Comprar</a>
@@ -140,7 +142,25 @@
 import { useStore } from "vuex";
 
 
+
 export default {
+  data () {
+    return {
+      numero: 0
+    }
+  },
+  computed: {
+      setValues () {
+      const store = useStore();
+      store.commit('setUnidades', this.numero);
+      console.log(this.numero);
+      }
+  },
+  methods: {
+    setData: function (item) {
+      console.log(item);
+    }
+  },
   setup() {
     const store = useStore();
 
@@ -149,8 +169,7 @@ export default {
 
     return {
       carrito,
-      total,
-      numero: 0
+      total
     };
   },
 };

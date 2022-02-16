@@ -8,6 +8,11 @@ export default createStore({
     ] 
   },
   mutations: {
+    setUnidades (state, n) {
+      console.log(n)
+      state.carrito[0].unidad + n;
+      console.log(state.carrito[0].unidad);
+    }
   },
   getters: {
     getCarrito: state => {
