@@ -3,14 +3,19 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     carrito: [
-      {nombre: 'Marte', precio: 19.90, unidad: 1},
-      {nombre: 'Plutón', precio: 9.90, unidad: 1},
+      {id:1, nombre: 'Marte', precio: 19.90, unidad: 1},
+      {id:2, nombre: 'Plutón', precio: 9.90, unidad: 1},
     ] 
   },
   mutations: {
-    setUnidades (state, n) {
-      console.log(n)
-      state.carrito[0].unidad + n;
+    setUnidades (state, id, unidad) {
+      //console.log(n)
+      state.carrito.forEach(carrito => {
+        if (carrito.id === id){
+          carrito.unidad = unidad;
+        }
+      });
+      //state.carrito[0].unidad = unidad;
       console.log(state.carrito[0].unidad);
     }
   },

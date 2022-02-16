@@ -102,10 +102,10 @@
             >
               <div class="card-body">
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-6">
                     <p class="card-title">{{ item.nombre }}</p>
                   </div>
-                  <div class="col-4">
+                  <div class="col-6">
                     <p class="card-title">
                       <small>{{ item.precio }}</small>
                     </p>
@@ -114,10 +114,11 @@
                     <input
                       type="number"
                       style="width: 3rem"
-                      v-model="numero"
+                      :value="item.unidad"
                       v-bind="setValues"
                     />
                   </div>
+                  <button class="btn btn-block btn-blue" v-on:click='setValue(item.id, item.unidad)'>Actualizar</button>
                 </div>
               </div>
             </div>
@@ -144,22 +145,20 @@ import { useStore } from "vuex";
 
 
 export default {
-  data () {
-    return {
-      numero: 0
-    }
-  },
+
   computed: {
-      setValues () {
-      const store = useStore();
-      store.commit('setUnidades', this.numero);
-      console.log(this.numero);
-      }
+      // setValues (id, unidad) {
+      // const store = useStore();
+      // store.commit('setUnidades', id, unidad);
+
+      // }
   },
   methods: {
-    setData: function (item) {
-      console.log(item);
-    }
+    setValues (id, unidad) {
+      const store = useStore();
+      store.commit('setUnidades', id, unidad);
+
+      }
   },
   setup() {
     const store = useStore();
