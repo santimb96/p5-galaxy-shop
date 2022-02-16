@@ -94,76 +94,40 @@
       <div class="col-lg-2">
         <div class="card bg-text" style="height: 100%">
           <div class="row">
-            <div class="col-12 d-flex justify-content-center">
+
+            <div
+              class="col-12 d-flex justify-content-center"
+              v-for="item in carrito"
+              :key="item"
+            >
               <div class="card-body">
                 <div class="row">
                   <div class="col-4">
-                    <p class="card-title">Luna</p>
+                    <p class="card-title">{{ item.nombre }}</p>
                   </div>
                   <div class="col-4">
-                    <p class="card-title"><small>19,95€</small></p>
+                    <p class="card-title">
+                      <small>{{ item.precio }}</small>
+                    </p>
                   </div>
                   <div class="col-4">
                     <input
                       type="number"
-                      name="unidad"
-                      value="1"
                       style="width: 3rem"
+                      v-model = "numero"
                     />
                   </div>
                 </div>
-
-
               </div>
             </div>
 
-            <div class="col-12 d-flex justify-content-center">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-4">
-                    <p class="card-title">Luna</p>
-                  </div>
-                  <div class="col-4">
-                    <p class="card-title"><small>19,95€</small></p>
-                  </div>
-                  <div class="col-4">
-                    <input
-                      type="number"
-                      name="unidad"
-                      value="1"
-                      style="width: 3rem"
-                    />
-                  </div>
-                </div>
-
-
-              </div>
+            <div class="text-end pe-3">
+              <p>{{ total }}</p>
             </div>
 
-            <div class="col-12 d-flex justify-content-center">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-4">
-                    <p class="card-title">Luna</p>
-                  </div>
-                  <div class="col-4">
-                    <p class="card-title"><small>19,95€</small></p>
-                  </div>
-                  <div class="col-4">
-                    <input
-                      type="number"
-                      name="unidad"
-                      value="1"
-                      style="width: 3rem"
-                    />
-                  </div>
-                </div>
-
-                <!-- <p class="text-center">19,95€</p> -->
-                <div class="text-center">
-                  <a href="#" class="btn btn-secondary producto">Comprar</a>
-                </div>
-              </div>
+            <!-- <p class="text-center">19,95€</p> -->
+            <div class="text-center">
+              <a href="#" class="btn btn-secondary producto">Comprar</a>
             </div>
           </div>
         </div>
@@ -173,7 +137,23 @@
 </template>
 
 <script>
-export default {};
+import { useStore } from "vuex";
+
+
+export default {
+  setup() {
+    const store = useStore();
+
+    const carrito = store.getters.getCarrito;
+    const total = store.getters.getTotal;
+
+    return {
+      carrito,
+      total,
+      numero: 0
+    };
+  },
+};
 </script>
 
 <style></style>
