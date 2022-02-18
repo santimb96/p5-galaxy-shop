@@ -13,7 +13,10 @@ export default createStore({
       {id:3, nombre: 'Luna', precio: 5.90, descripcion: "Viaje encantador",unidad: 1},
       {id:4, nombre: 'Murcia', precio: 1, descripcion: "Viaje encantador", unidad: 1},
     ],
-    compra:[]
+    compra:[{nombre: "Santi", fecha: '3/2/1996', numero: "3123424", cvc: "357", carrito: [
+        {id:1, nombre: 'Marte', precio: 19.90, descripcion: "Viaje encantador",unidad: 1},
+        {id:2, nombre: 'Plutón', precio: 9.90, descripcion: "Viaje encantador", unidad: 1}
+      ]}]
   },
   mutations: {
     setUnidades (state, producto) {
@@ -47,7 +50,7 @@ export default createStore({
       });
       return total.toFixed(2);
     },
-    getCompra:state=>{
+    getCompra:state =>{
       return state.compra;
     }
   },
