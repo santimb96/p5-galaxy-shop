@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid bg-dark">
+  <div class="container-fluid bg-dark ">
     <div class="row">
-      <div class="col-9">
+      <div class="col-lg-9 mb-2">
         <div class="container-fluid bg-text h-100">
           <div class="row">
             <div class="col-12">
@@ -16,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3 bg-text mb-2">
         <CarritoComponent/>
       </div>
     </div>
@@ -49,9 +49,7 @@ export default {
       }
 
       this.store.commit('pagarCompra', compra);
-
       return this.$router.push({path: 'pagado'});
-
     }
   }
 };

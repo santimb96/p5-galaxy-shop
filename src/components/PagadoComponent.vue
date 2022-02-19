@@ -10,28 +10,112 @@
           <div class="col-12 d-flex justify-content-center mb-3">
             <h2>Te acabamos de mandar un mail con el recibo</h2>
           </div>
-            <table class="table text-text text-center">
-              <thead>
-              <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Producto</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>{{ compra.nombre }}</td>
-                <td>{{ compra.fecha }}</td>
-                <td v-for="item in compra.carrito" :key="item">
-                  <ul class="list-group ">
-                    <li class="list-group-item">Nombre: {{ item.nombre }}</li>
-                    <li class="list-group-item">Precio: {{ item.precio }}</li>
-                    <li class="list-group-item">Unidades: {{ item.unidad}}</li>
-                  </ul>
-                </td>
-              </tr>
-              </tbody>
-            </table>
+
+          <div class="main" style="color: black">
+            <div class="container mt-3">
+              <div class="card animate__animated animate__fadeIn">
+                <div class="card-header">
+                  <strong>Fecha compra {{ currentDate }}</strong>
+                </div>
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col-6 col-md-6">
+                      <h6 class="mb-2"><strong>Datos de la tarjeta</strong></h6>
+                      <div>{{ compra.nombre }}</div>
+                      <div>{{ compra.numero }}</div>
+                      <div>{{ compra.fecha }}</div>
+                    </div>
+                  </div>
+
+                  <div class="table-responsive-sm">
+                    <table class="table table-sm table-striped">
+                      <thead>
+                      <tr>
+                        <th scope="col" width="2%" class="center">#</th>
+                        <th scope="col" width="20%">Producto/Servicio</th>
+                        <th scope="col" class="d-none d-sm-table-cell" width="50%">Descripción</th>
+
+                        <th scope="col" width="10%" class="text-right">P. Unidad</th>
+                        <th scope="col" width="8%" class="text-right">Unidad</th>
+                        <th scope="col" width="10%" class="text-right">Total</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr v-for="item in compra.carrito" :key="item">
+                        <td class="text-left">{{ item.id }}</td>
+                        <td class="item_name">{{ item.nombre }}</td>
+                        <td class="item_desc d-none d-sm-table-cell">{{  item.descripcion }}</td>
+
+                        <td class="text-right">{{ item.precio }} €</td>
+                        <td class="text-right">{{ item.unidad }}</td>
+                        <td class="text-right">{{ item.precio * item.unidad }} €</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-5">
+                    </div>
+
+                    <div class="col-lg-4 col-sm-5 ml-auto">
+                      <table class="table table-sm table-clear">
+                        <tbody>
+                        <tr>
+                          <td class="left">
+                            <strong>Total</strong>
+                          </td>
+                          <td class="text-right bg-light">
+                            <strong>{{ total }} €</strong>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer container-fluid mt-3 bg-light">
+            <div class="row">
+              <div class="col footer-app">&copy; Todos los derechos reservados · <span class="brand-name"></span></div>
+            </div>
+          </div>
+          <!--            <table class="table text-text text-center">
+                        <thead>
+                        <tr>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">Producto</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>{{ compra.nombre }}</td>
+                          <td>{{ compra.fecha }}</td>
+                          <td>
+                            <table class="d-flex flex-column">
+                              <tr>
+                                <td>Nombre</td>
+                                <td>Precio</td>
+                                <td>Producto</td>
+                              </tr>
+                              <div v-for="item in compra.carrito" :key="item">
+                              <tr>
+                                <td><li class="">{{ item.nombre }}</li></td>
+                                <td><li class="">{{ item.precio }}</li></td>
+                                <td><li class="">{{ item.unidad}}</li></td>
+                              </tr>
+                              </div>
+                            </table>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>-->
         </div>
       </div>
     </div>
@@ -43,10 +127,31 @@ import {useStore} from "vuex";
 
 export default {
   //name: "PagadoComponent",
+  data() {
+    return {
+      store: useStore()
+    }
+  },
+  computed: {
+    currentDate(){
+      let date = new Date()
+      let day = date.getDate()
+      let month = date.getMonth() + 1
+      let year = date.getFullYear()
+
+      if(month < 10){
+        return `${day}/0${month}/${year}`;
+      }else{
+        return `${day}/${month}/${year}`;
+      }
+    },
+    total(){
+      return this.store.getters.getTotal;
+    }
+  },
   setup() {
     const store = useStore();
-    const compra = store.getters.getCompra[0];
-    console.log(compra);
+    const compra = store.getters.getCompra[store.getters.getCompra.length - 1]; //cogemos el último!
     return {
       compra
     }

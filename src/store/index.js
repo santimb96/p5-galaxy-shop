@@ -11,7 +11,12 @@ export default createStore({
       {id:1, nombre: 'Marte', precio: 19.90, descripcion: "Viaje encantador",unidad: 1},
       {id:2, nombre: 'Plutón', precio: 9.90, descripcion: "Viaje encantador", unidad: 1},
       {id:3, nombre: 'Luna', precio: 5.90, descripcion: "Viaje encantador",unidad: 1},
-      {id:4, nombre: 'Murcia', precio: 1, descripcion: "Viaje encantador", unidad: 1},
+      {id:4, nombre: 'Mercurio', precio: 19.90, descripcion: "Viaje encantador",unidad: 1},
+      {id:5, nombre: 'Venus', precio: 9.90, descripcion: "Viaje encantador", unidad: 1},
+      {id:6, nombre: 'Júpiter', precio: 5.90, descripcion: "Viaje encantador",unidad: 1},
+      {id:7, nombre: 'Saturno', precio: 19.90, descripcion: "Viaje encantador", unidad: 1},
+      {id:8, nombre: 'Urano', precio: 19.90, descripcion: "Viaje encantador",unidad: 1},
+      {id:9, nombre: 'Neptuno', precio: 9.90, descripcion: "Viaje encantador", unidad: 1},
     ],
     compra:[{nombre: "Santi", fecha: '3/2/1996', numero: "3123424", cvc: "357", carrito: [
         {id:1, nombre: 'Marte', precio: 19.90, descripcion: "Viaje encantador",unidad: 1},

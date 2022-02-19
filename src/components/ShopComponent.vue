@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-9">
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-2" v-for="producto in items"
+          <div class="col-12 col-sm-12 col-md-4 d-flex justify-content-center mb-2" v-for="producto in items"
                :key="producto">
             <div class="card bg-secondary text-white" style="width: 20rem">
               <img
@@ -13,7 +13,7 @@
               />
               <div class="card-body">
                 <h1 class="card-title text-center">{{ producto.nombre }}</h1>
-                <h5 class="text-center">{{ producto.precio }}</h5>
+                <h5 class="text-center">{{ producto.precio }} €</h5>
                 <p class="card-text text-center">
                   {{ producto.descripcion }}
                 </p>
@@ -27,7 +27,8 @@
       </div>
 
 
-      <div class="col-lg-3">
+      <div class="col-lg-3 bg-text mb-lg-2 carrito overflow-auto" v-if="display">
+        <button v-on:click="show()" class="sm-only">X</button>
         <CarritoComponent/>
 
         <!--            <div class="card bg-text" style="height: 100%">
@@ -72,6 +73,10 @@
                       </div>
                     </div>-->
       </div>
+      <div v-else>
+        <!--<font-awesome-icon icon="fa-solid fa-cart-arrow-up" />-->
+      <button v-on:click="show()" style="position: fixed; right: 0;bottom: 0; font-size: 3vh" class="sm-only">⬆</button>
+      </div>
     </div>
 
   </div>
@@ -84,7 +89,8 @@ import CarritoComponent from "./CarritoComponent.vue";
 export default {
   data() {
     return {
-      store: useStore()
+      store: useStore(),
+      display: true
     }
   },
   computed: {
@@ -95,18 +101,18 @@ export default {
   methods: {
     setValues(producto) {
       this.store.commit('setUnidades', producto);
+    },
+    show: function() {
+        console.log(this.display);
+        this.display = !this.display;
     }
   },
   setup() {
     const store = useStore();
-
     const carrito = store.getters.getCarrito;
     const items = store.getters.getItems;
-    //const total =
-
     return {
       carrito,
-      //total,
       items
     };
   },

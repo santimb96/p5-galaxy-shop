@@ -38,6 +38,7 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
+
 .nav-link:active {
   color: $text;
 }
@@ -49,19 +50,23 @@ body {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
 .navbar-toggler {
   color: $text;
   border: none;
 }
+
 .nav-link {
   color: $text;
   transition: 0.3s;
 }
+
 .nav-link:hover {
   background-color: $secondary;
   border-radius: 5px;
   color: $text;
 }
+
 .nav-link:active {
   color: $text;
 }
@@ -70,41 +75,67 @@ body {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
+
 .bg-image {
   //background-image: url('../assets/spacePrueba.jpg');
   background-color: #212529;
-  height: 100vh;  background-repeat: no-repeat;
+  height: 100vh;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 .satelite {
   width: 30em;
 }
+
 .projects {
   width: 300px;
   height: 250px;
 }
+
 .featured {
   width: 200px;
   height: 150px;
 }
+
 .league {
   width: 600px;
   height: 550px;
 }
+
 .hr {
   background: $text;
   height: 5px;
 }
-.carousel{
+
+.carousel {
   max-width: 800px;
 }
-.producto{
- transition: 0.3s;
- border: none;
+
+.producto {
+  transition: 0.3s;
+  border: none;
 }
-.producto:hover{
+
+.producto:hover {
   background-color: $primary;
-  color:$text;
+  color: $text;
 }
 
+@include media-breakpoint-down(lg) {
+  .carrito {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 20vh;
+    width: 30vh;
+    display: block;
+  }
+}
 
+@include media-breakpoint-up(lg) {
+  .sm-only {
+    display: none;
+  }
+
+}

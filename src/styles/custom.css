@@ -11169,4 +11169,20 @@ body {
   color: white;
 }
 
+@media (max-width: 991.98px) {
+  .carrito {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 20vh;
+    width: 30vh;
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .sm-only {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=custom.css.map */
