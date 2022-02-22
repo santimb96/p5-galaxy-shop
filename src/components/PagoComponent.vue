@@ -5,6 +5,9 @@
         <div class="container-fluid bg-text h-100">
           <div class="row">
             <div class="col-12">
+              <div class="mt-2">
+                <button v-on:click="back" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></button>
+              </div>
               <form class="d-flex flex-column m-4">
                <label>Nombre <input type="text" placeholder="Nombre" class="w-100 mb-4" v-model="nombre"/></label>
                 <label>Número de tarjeta<input type="text" placeholder="Número de tarjeta" class="w-100 mb-4" v-model="numero"/></label>
@@ -50,6 +53,9 @@ export default {
 
       this.store.commit('pagarCompra', compra);
       return this.$router.push({path: 'pagado'});
+    },
+    back(){
+      return this.$router.push({path: 'shop'});
     }
   }
 };
