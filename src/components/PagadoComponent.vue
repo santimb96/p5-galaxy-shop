@@ -48,7 +48,7 @@
 
                         <td class="text-right">{{ item.precio }} €</td>
                         <td class="text-right">{{ item.unidad }}</td>
-                        <td class="text-right">{{ item.precio * item.unidad }} €</td>
+                        <td class="text-right">{{ (item.precio * item.unidad).toFixed(2) }} €</td>
                       </tr>
                       </tbody>
                     </table>
