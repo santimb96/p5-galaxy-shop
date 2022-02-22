@@ -20,7 +20,7 @@
     </div>
 
     <div class="row justify-content-center">
-      <h1 class="text-text text-center font-autowide">FEATURED PROJECTS</h1>
+      <h2 class="text-text text-center font-autowide">FEATURED PROJECTS</h2>
 
       <div
         id="carouselExampleInterval"
@@ -76,7 +76,7 @@
 
   <div class="mensaje bg-secondary">
     <div class="contenido p-4">
-      <h1 class="titulo text-text text-center font-autowide">OUR MISSION</h1>
+      <h2 class="titulo text-text text-center font-autowide">OUR MISSION</h2>
       <p class="text-text text-center">
         WE WANT TO CONQUER ANY LAND IN OUR WORLD, OR PASS THIS SUBJECT WITH HIGH
         SCORE
@@ -87,9 +87,9 @@
   <!-- MÁS CARTAS -->
   <div class="bg-primary p-4 row">
     <div class="container col-xl-6">
-      <h1 class="text-text text-center font-autowide">FEATURED VIDEO</h1>
+      <h2 class="text-text text-center font-autowide">FEATURED VIDEO</h2>
       <div class="ratio ratio-21x9 border border-text rounded">
-        <iframe src="https://www.youtube.com/embed/Y_plhk1FUQA"></iframe>
+        <iframe src="https://www.youtube.com/embed/Y_plhk1FUQA" title="space"></iframe>
       </div>
     </div>
     <div class="container col-xl-6">
@@ -103,13 +103,13 @@
                 >
                   <img
                     class="border border-text featured"
-                    src="../assets/rocket.jpg"
+                    src="../assets/rocket.jpg" alt="rocket"
                   />
                 </div>
                 <div class="col-xl-6">
-                  <h5 class="card-title text-text text-center m-2">
+                  <h2 class="card-title text-text text-center m-2">
                     DID YOU EXPECT SOMETHING?
-                  </h5>
+                  </h2>
                   <p class="card-text text-text text-center">
                     With supporting text below as a natural lead-in to
                     additional content.
@@ -141,13 +141,13 @@
                 >
                   <img
                     class="border border-text featured"
-                    src="../assets/rocket.jpg"
+                    src="../assets/rocket.jpg" alt="rocket"
                   />
                 </div>
                 <div class="col-xl-6">
-                  <h5 class="card-title text-text text-center m-2">
+                  <h2 class="card-title text-text text-center m-2">
                     YES OR NOT?
-                  </h5>
+                  </h2>
                   <p class="card-text text-text text-center">
                     With supporting text below as a natural lead-in to
                     additional content.
@@ -179,7 +179,7 @@
     <div class="container text-white p-3">
       <div class="row text-center">
         <div class="col-xl-6">
-          <h1 class="font-autowide">FOLLOW OUR MISSIONS ON</h1>
+          <h2 class="font-autowide">FOLLOW OUR MISSIONS ON</h2>
         </div>
 
         <div class="col-xl-6 text-center">

@@ -1,13 +1,13 @@
 <template>
   <div class="container-fluid bg-dark">
     <div class="row">
-      <div class="col-lg-9">
+      <div class="col-lg-9 col-md-12 col-sm-12">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-4 d-flex justify-content-center mb-2" v-for="producto in items"
                :key="producto">
             <div class="card bg-secondary text-white" style="width: 20rem">
               <img
-                  src="../assets/rocketLeague.webp"
+                  src="../assets/planetas/marte.jpg"
                   class="img-fluid rounded m-3"
                   alt="space"
               />
@@ -74,8 +74,7 @@
                     </div>-->
       </div>
       <div v-else>
-        <!--<font-awesome-icon icon="fa-solid fa-cart-arrow-up" />-->
-      <button v-on:click="show()" style="position: fixed; right: 0;bottom: 0; font-size: 3vh" class="sm-only">⬆</button>
+      <button v-on:click="show()" style="position: fixed;bottom: 0; font-size: 3vh" class="sm-only">🛒</button>
       </div>
     </div>
 

@@ -27,7 +27,7 @@
             />
           </div>
           <div class="col-2">
-            <button class="btn btn-secondary" v-on:click="borrarItem(item)">x</button>
+            <button class="btn btn-secondary" v-on:click="borrarItem(item)"><i class="fa fa-trash"></i></button>
           </div>
         </div>
       </div>
