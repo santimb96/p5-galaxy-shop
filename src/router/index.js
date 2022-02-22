@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Shop from '../views/Shop.vue'
 import Pago from '../views/Pago.vue'
+import PagadoComponent from "../components/PagadoComponent.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/pago",
     name: "Pago",
     component: Pago
+  },
+  {
+    path: "/pagado",
+    name: "pagado",
+    component: PagadoComponent
   }
 ]
 
@@ -31,5 +37,6 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
+
 
 export default router

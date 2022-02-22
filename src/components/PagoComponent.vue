@@ -8,9 +8,9 @@
               <form class="d-flex flex-column m-4">
                <label>Nombre <input type="text" placeholder="Nombre" class="w-100 mb-4" v-model="nombre"/></label>
                 <label>Número de tarjeta<input type="text" placeholder="Número de tarjeta" class="w-100 mb-4" v-model="numero"/></label>
-                <label>Fecha de expiración<input type="text" placeholder="Fecha de expiración" class="w-100 mb-4" v-model="fecha"/></label>
+                <label>Fecha de expiración<input type="date" class="w-100 mb-4" v-model="fecha"/></label>
                 <label>CVC<input type="text" placeholder="CVC" class="w-100 mb-4" v-model="cvc"/></label>
-                <button class="btn btn-success" >Pagar</button>
+                <button class="btn btn-success" v-on:click="pagar();">Pagar</button>
               </form>
             </div>
           </div>
@@ -24,10 +24,11 @@
 </template>
 <script>
 import CarritoComponent from "./CarritoComponent.vue";
+import PagadoComponent from "./PagadoComponent.vue";
 import {useStore} from "vuex";
 
 export default {
-  components: {CarritoComponent},
+  components: {CarritoComponent, PagadoComponent},
   data(){
     return {
       store: useStore(),
@@ -41,13 +42,16 @@ export default {
     pagar(){
       let compra = {
         nombre: this.nombre,
-        fecha: this.fecha,
+        fecha: new Date(this.fecha).toLocaleDateString(),
         numero: this.numero,
         cvc: this.cvc,
         carrito: this.store.getters.getCarrito
       }
 
       this.store.commit('pagarCompra', compra);
+
+      return this.$router.push({path: 'pagado'});
+
     }
   }
 };
