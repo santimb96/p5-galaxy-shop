@@ -82,15 +82,7 @@ export default {
       this.store.commit('borrarProducto', producto);
     },
 
-  }/*,
-  setup() {
-    const store = useStore();
-    const carrito = store.getters.getCarrito;
-
-    return {
-      carrito
-    };
-  },*/
+  }
 };
 
 </script>

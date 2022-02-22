@@ -18,7 +18,7 @@
                   {{ producto.descripcion }}
                 </p>
                 <div class="text-center">
-                  <a class="btn btn-text producto" v-on:click="setValues(producto)">Comprar</a>
+                  <a class="btn btn-text producto" v-on:click="setValues(producto)"><i class="fa fa-shopping-cart"></i> Comprar</a>
                 </div>
               </div>
             </div>
@@ -28,53 +28,12 @@
 
 
       <div class="col-lg-3 bg-text mb-lg-2 carrito overflow-auto" v-if="display">
-        <button v-on:click="show()" class="sm-only">X</button>
+        <button v-on:click="show()" class="sm-only btn btn-danger m-1"><i class="fa fa-times"></i></button>
         <CarritoComponent/>
 
-        <!--            <div class="card bg-text" style="height: 100%">
-                      <div class="row">
-
-                        <div
-                            class="col-12 d-flex justify-content-center"
-                            v-for="item in carrito"
-                            :key="item"
-                        >
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col-6">
-                                <p class="card-title">{{ item.nombre }}</p>
-                              </div>
-                              <div class="col-6">
-                                <p class="card-title">
-                                  <small>{{ item.precio }}</small>
-                                </p>
-                              </div>
-                              <div class="col-4">
-                                <input
-                                    type="number"
-                                    style="width: 3rem"
-                                    v-model="item.unidad"
-
-                                />
-                              </div>
-                              <button class="btn btn-block btn-blue" v-on:click='setValue(item.id, item.unidad)'>Actualizar
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="text-end pe-3">
-                          <p>{{ total }}</p>
-
-                        </div>
-                        <div class="text-center">
-                          <a href="#" class="btn btn-secondary producto">Comprar</a>
-                        </div>
-                      </div>
-                    </div>-->
       </div>
       <div v-else>
-      <button v-on:click="show()" style="position: fixed;bottom: 0; font-size: 3vh" class="sm-only">🛒</button>
+      <button v-on:click="show()" style="position: fixed; bottom: 0; font-size: 3vh" class="sm-only btn btn-text text-center"><i class="fas fa-cart-plus"></i></button>
       </div>
     </div>
 
