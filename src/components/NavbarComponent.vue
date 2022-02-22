@@ -10,13 +10,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link class="nav-link" to="/">HOME</router-link>
+            <router-link class="nav-link" to="/" style="color:white;">HOME</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/shop">SHOP</router-link>
+            <router-link class="nav-link" to="/shop" style="color:white;">SHOP</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/about">ABOUT</router-link>
+            <router-link class="nav-link" to="/about" style="color:white;">ABOUT</router-link>
           </li>
         </ul>
       </div>
