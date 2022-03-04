@@ -37,8 +37,8 @@ todo.
 - Los links son distinguibles.
 - Los links tienen un hoover de un color diferente al pasar por encima.
 - El puntero se convierte en un dedo al pasar por encima de algún link.
-- Utilizamos un <h1> en cada página. 
-- Titulamos las secciones con <h2>, de esta manera indicamos y ordenamos las ideas por relevancia.
+- Utilizamos un `<h1>` en cada página. 
+- Titulamos las secciones con `<h2>`, de esta manera indicamos y ordenamos las ideas por relevancia.
 - Los usuarios pueden ver los contenidos con claridad, incluso aquellos con dificultades en la vista.
 
 ## MEJORAS
