@@ -16,7 +16,7 @@
             <router-link class="nav-link" to="/shop" style="color:white;">SHOP</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/about" style="color:white;">ABOUT</router-link>
+            <router-link class="nav-link" to="/about" style="color:white;">ABOUT US</router-link>
           </li>
         </ul>
       </div>

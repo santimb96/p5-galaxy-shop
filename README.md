@@ -46,4 +46,13 @@ Las páginas presentan una serie de cambios para mejorar la experiencia de usuar
 - En el responsive de la página 'Shop', el carrito es un modal: al darle al botón del carrito aparece y al darle a la x se esconde.
 - Al hacer el checkout, hemos añadido el botón atrás y al finalizar la compra, te redirige a otra página con la confirmación de la compra del usuario y 
   un resumen de los productos que ha comprado.
+
+## PROBLEMAS ENCONTRADOS
+
+En relación a los iconos proporcionados por Font Awesome, en local todos funcionan correctamente pero, sin embargo, en Netlify funcionan algunos en concreto y otros no.
+En el navegador se refleja que hay un problema con el CDN de Font Awesome pero, sin embargo, funcionan menos algunos. La única explicación racional es que la versión de algunos iconos
+no es admitida por el despliegue y por eso sucede este error. 
+
+Otra observación a tener en cuenta es el footer. Por lo que hemos podido observar, Vue tiene su propio footer pero que no requiere un uso obligatorio de este, por lo que hemos optado
+por emplear un footer convencional mediante Bootstrap. Sin embargo, hemos tenido que realizar una serie de cambios en el CSS para que el footer permanezca en el bottom de la página en cualquier tipo de vista.
   

@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 bg-text mb-2">
+      <div class="col-lg-3 bg-text mb-2" style="height: 50vw;">
         <CarritoComponent/>
       </div>
     </div>

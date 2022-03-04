@@ -12,7 +12,7 @@
           </div>
 
           <div class="main" style="color: black">
-            <div class="container mt-3">
+            <div class="container mt-3" style="height: 35vw;">
               <div class="card animate__animated animate__fadeIn">
                 <div class="card-header">
                   <strong>Fecha compra {{ currentDate }}</strong>
