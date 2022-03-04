@@ -30,21 +30,21 @@
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
             <img
-              src="../assets/carousel/cohete-editado.jpg"
+              src="../assets/carousel/cohete-editado.webp"
               class="d-block w-100"
               alt="space"
             />
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img
-              src="../assets/carousel/paisaje-editado.jpg"
+              src="../assets/carousel/paisaje-editado.webp"
               class="d-block w-100"
               alt="space"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="../assets/carousel/astronauta-editado.jpg"
+              src="../assets/carousel/astronauta-editado.webp"
               class="d-block w-100"
               alt="space"
             />
@@ -103,7 +103,7 @@
                 >
                   <img
                     class="border border-text featured"
-                    src="../assets/rocket.jpg" alt="rocket"
+                    src="../assets/rocket.webp" alt="rocket"
                   />
                 </div>
                 <div class="col-xl-6">
