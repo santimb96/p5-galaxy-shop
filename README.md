@@ -49,6 +49,7 @@ Las páginas presentan una serie de cambios para mejorar la experiencia de usuar
 - Al hacer el checkout, hemos añadido el botón atrás y al finalizar la compra, te redirige a otra página con la confirmación de la compra del usuario y 
   un resumen de los productos que ha comprado.
 - Si se eliminan todos los productos del carrito, aparece el siguiente mensaje: "No hay productos en la cesta".
+
 ## PROBLEMAS ENCONTRADOS
 
 En relación a los iconos proporcionados por Font Awesome, en local todos funcionan correctamente pero, sin embargo, en Netlify funcionan algunos en concreto y otros no.
