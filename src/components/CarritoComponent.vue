@@ -43,10 +43,11 @@
         </div>
       </div>
 
-      <div class="text-center">
+
+<!--      <div class="text-center">
         <router-link class="btn btn-secondary producto m-3" to="/pago">Comprar</router-link>
         <router-view/>
-      </div>
+      </div>-->
     </div>
     </div>
 

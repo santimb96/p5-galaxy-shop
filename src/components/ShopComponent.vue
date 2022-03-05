@@ -30,6 +30,10 @@
       <div class="col-lg-3 bg-text mb-lg-2 carrito overflow-auto" v-if="display">
         <button v-on:click="show()" class="sm-only btn btn-danger m-1"><i class="fa fa-times"></i></button>
         <CarritoComponent/>
+        <div class="text-center">
+          <router-link class="btn btn-secondary producto m-3" to="/pago">Comprar</router-link>
+          <router-view/>
+        </div>
 
       </div>
       <div v-else>

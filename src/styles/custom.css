@@ -11186,10 +11186,18 @@ body {
     height: 100%;
     top: 0;
   }
+
+  .toBottom {
+    height: 45rem;
+  }
 }
 @media (min-width: 992px) {
   .sm-only {
     display: none;
+  }
+
+  .toBottom {
+    height: 50vw;
   }
 }
 

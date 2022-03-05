@@ -140,6 +140,9 @@ body {
     top:0;
   }
 
+  .toBottom{
+    height: 45rem;
+  }
 }
 
 @include media-breakpoint-up(lg) {
@@ -147,6 +150,7 @@ body {
     display: none;
   }
 
-
-
+  .toBottom{
+    height: 50vw;
+  }
 }

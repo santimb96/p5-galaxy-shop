@@ -48,7 +48,7 @@ Las páginas presentan una serie de cambios para mejorar la experiencia de usuar
 - En el responsive de la página 'Shop', el carrito es un modal: al darle al botón del carrito aparece y al darle a la x se esconde.
 - Al hacer el checkout, hemos añadido el botón atrás y al finalizar la compra, te redirige a otra página con la confirmación de la compra del usuario y 
   un resumen de los productos que ha comprado.
-
+- Si se eliminan todos los productos del carrito, aparece el siguiente mensaje: "No hay productos en la cesta".
 ## PROBLEMAS ENCONTRADOS
 
 En relación a los iconos proporcionados por Font Awesome, en local todos funcionan correctamente pero, sin embargo, en Netlify funcionan algunos en concreto y otros no.
@@ -57,4 +57,8 @@ no es admitida por el despliegue y por eso sucede este error.
 
 Otra observación a tener en cuenta es el footer. Por lo que hemos podido observar, Vue tiene su propio footer pero que no requiere un uso obligatorio de este, por lo que hemos optado
 por emplear un footer convencional mediante Bootstrap. Sin embargo, hemos tenido que realizar una serie de cambios en el CSS para que el footer permanezca en el bottom de la página en cualquier tipo de vista.
+
+El botón comprar lo habíamos puesto dentro del 'carrito component' pero solo queremos que aparezca este botón en la 'Shop Component'. Por eso, lo hemos escrito dentro del 'Shop Component', de esta manera, al ir al 'Pago Component'
+no sobran botones y mejora la experiencia del usuario.
+
   

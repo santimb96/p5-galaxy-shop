@@ -11,8 +11,8 @@
             <h2>Te acabamos de mandar un mail con el recibo</h2>
           </div>
 
-          <div class="main" style="color: black">
-            <div class="container mt-3" style="height: 35vw;">
+          <div class="main toBottom" style="color: black">
+            <div class="container mt-3">
               <div class="card animate__animated animate__fadeIn">
                 <div class="card-header">
                   <strong>Fecha compra {{ currentDate }}</strong>
@@ -80,11 +80,7 @@
             </div>
           </div>
 
-          <div class="footer container-fluid mt-3 bg-light">
-            <div class="row">
-              <div class="col footer-app">&copy; Todos los derechos reservados · <span class="brand-name"></span></div>
-            </div>
-          </div>
+
           <!--            <table class="table text-text text-center">
                         <thead>
                         <tr>
