@@ -43,13 +43,21 @@ todo.
 - Titulamos las secciones con `<h2>`, de esta manera indicamos y ordenamos las ideas por relevancia.
 - Los usuarios pueden ver los contenidos con claridad, incluso aquellos con dificultades en la vista.
 
-## MEJORAS
+## MEJORAS (EXTRAS)
 Las páginas presentan una serie de cambios para mejorar la experiencia de usuario:
 - En el responsive de la página 'Shop', el carrito es un modal: al darle al botón del carrito aparece y al darle a la x se esconde.
 - Al hacer el checkout, hemos añadido el botón atrás y al finalizar la compra, te redirige a otra página con la confirmación de la compra del usuario y 
   un resumen de los productos que ha comprado.
 - Si se eliminan todos los productos del carrito, aparece el siguiente mensaje: "No hay productos en la cesta".
-
+- Se ha cambiado el favicon que hay por defecto como icono de página por uno custom.
+- El vídeo de YouTube del Front Page es un vídeo de muestra que estaba en la página original pero que no podía
+ser reproducido. En este caso, es un vídeo real.
+- El componente de "About us" incluye dos cartas sobre nosotros, los autores de la web, con enlaces funcionales hacía nuestros perfiles profesionales
+en GitHub, Linkedin y contacto por correo electrónico.
+- El componente "FooterComponent" es uno externo y usado en el App.vue porque será un elemento común en todos los componentes, al igual que el "NavbarComponent".
+- Lás imágenes son comprimidas en formato JPEG de alta calidad heredado para web (utilidad de Adobe Photoshop 2020), y en las que se ha podido, se han reconvertido al
+formato WEBP. Sin embargo, los PNG de la página original (véase el satellite.png de la página principal), no se pueden reconvertir a otro formato debido
+a que perdería la transparencia que caracteriza a la imagen y habría un fondo blanco por defecto.
 ## PROBLEMAS ENCONTRADOS
 
 En relación a los iconos proporcionados por Font Awesome, en local todos funcionan correctamente pero, sin embargo, en Netlify funcionan algunos en concreto y otros no.

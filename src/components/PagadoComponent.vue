@@ -4,11 +4,11 @@
     <div class="row">
       <div class="col-12 d-flex justify-content-center">
         <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <h1>¡GRACIAS POR TU COMPRA!</h1>
+          <div class="col-12">
+            <h1 class="text-center fs-2">¡GRACIAS POR TU COMPRA!</h1>
           </div>
-          <div class="col-12 d-flex justify-content-center mb-3">
-            <h2>Te acabamos de mandar un mail con el recibo</h2>
+          <div class="col-12  mb-3">
+            <h2 class="text-center fs-4">Te acabamos de mandar un mail con el recibo</h2>
           </div>
 
           <div class="main toBottom" style="color: black">
@@ -79,39 +79,6 @@
               </div>
             </div>
           </div>
-
-
-          <!--            <table class="table text-text text-center">
-                        <thead>
-                        <tr>
-                          <th scope="col">Nombre</th>
-                          <th scope="col">Fecha</th>
-                          <th scope="col">Producto</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                          <td>{{ compra.nombre }}</td>
-                          <td>{{ compra.fecha }}</td>
-                          <td>
-                            <table class="d-flex flex-column">
-                              <tr>
-                                <td>Nombre</td>
-                                <td>Precio</td>
-                                <td>Producto</td>
-                              </tr>
-                              <div v-for="item in compra.carrito" :key="item">
-                              <tr>
-                                <td><li class="">{{ item.nombre }}</li></td>
-                                <td><li class="">{{ item.precio }}</li></td>
-                                <td><li class="">{{ item.unidad}}</li></td>
-                              </tr>
-                              </div>
-                            </table>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>-->
         </div>
       </div>
     </div>
